@@ -40,26 +40,26 @@ public class CalculateMain {
                 break;
             }
 
-            int rst = 0;
+            int result = 0;
 
             if (op.equals("+")) {
-                rst = a + b;
+                result = num1 + num2;
             } else if (op.equals("-")) {
-                rst = a - b;
+                result = num1 - num2;
             } else if (op.equals("*")) {
-                rst = a * b;
+                result = num1 * num2;
             } else if (op.equals("/")) {
-                if (b == 0) {
+                if (num2 ==  0) {
                     System.out.println("0으로 나눌 수 없습니다. 다시 입력하세요");
                     continue;
                 }
-                rst = a / b;
+                result = num1 / num2;
             } else {
                 System.out.print("잘못된 연산자 입니다.");
                 continue;
 
             }
-            System.out.println("rst = " + rst);
+            System.out.println("rst = " + result);
         }
         sc.close();
     }
