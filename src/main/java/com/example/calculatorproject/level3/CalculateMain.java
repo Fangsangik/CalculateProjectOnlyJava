@@ -72,10 +72,14 @@ public class CalculateMain {
 
     // 입력값을 분석하여 적절한 Number 타입으로 변환하는 메서드
     private static Number parseInput(String input) {
-        if (input.contains(".")) {
-            return Double.parseDouble(input);
-        } else {
-            return Integer.parseInt(input);
+        try {
+            if (input.contains(".")) {
+                return Double.parseDouble(input);
+            } else {
+                return Integer.parseInt(input);
+            }
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("잘못된 숫자 형식입니다. 다시 입력해주세요");
         }
     }
 
