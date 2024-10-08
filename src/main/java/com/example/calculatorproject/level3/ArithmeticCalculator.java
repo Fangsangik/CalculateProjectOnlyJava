@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //Number -> int, double, long등 부모형 타입
-public class ArithmeticCalculator <T extends Number> {
+public class ArithmeticCalculator <T extends Number & Comparable<T>> {
 
     private final List<Double> rsts = new ArrayList<>();
 
@@ -18,9 +18,9 @@ public class ArithmeticCalculator <T extends Number> {
         return result;
     }
 
-    public List<Double> getBiggerRst(double val) {
+    public List<Double> getBiggerRst(T val) {
         return rsts.stream()
-                .filter(rsts -> rsts > val)
+                .filter(rsts -> Double.valueOf(val.doubleValue()).compareTo(rsts) < 0)
                 .collect(Collectors.toList());
     }
 
