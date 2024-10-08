@@ -44,14 +44,21 @@ public class CalculateMain {
 
                 Operation operation = getOperation(operator);
 
-                double result = calculator.calculate(num1, num2, operation);
-                System.out.println("결과 : " + result);
+                // 계산 수행 및 결과 출력
+                Number result = calculator.calculate(num1, num2, operatorType);
+                System.out.println("결과: " + result);
 
                 // 계산 결과를 List에 추가
                 resultList.add(result);
 
-                List<Double> compareRst = calculator.getBiggerRst(compareVal);
-                System.out.println("입력 값보다 큰 결과 : " + compareRst);
+                // 특정 값보다 큰 결과 조회
+                System.out.print("비교할 값을 입력하세요: ");
+                Number compareVal = sc.nextDouble();
+                sc.nextLine();  // 버퍼 정리
+
+                // 비교한 값보다 큰 결과 필터링 및 출력
+                List<Number> compareRst = calculator.getResultsGreaterThan(resultList, compareVal);
+                System.out.println("입력 값보다 큰 결과: " + compareRst);
 
 
                 System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
