@@ -96,6 +96,11 @@
   코드를 작성할때 주로 제네릭과 람다는 잘 사용하지 않고 풀어서 쓰는 경우가 많았다.
   그러다 보니 람다 기능에 익숙하지 않은 부분도 있고 제네릭 함수에 익숙 하지 않은 부분도 있다.
   <a-href>https://velog.io/@ik0605/Generic-1,</a> <a-href>https://velog.io/@ik0605/Generic-2</a>
+
+- Integer, Long, Float, Double 일 경우 다양한 숫자를 처리하기 어려움 
+  Number class를 사용해야 할 것 같은데... Number를 사용한 다음 각각의 Double일때 Integer일때의 경우를 다 생각해서 작성해야 하는지에 대한 고민이
+  들었고, 또한 Operation.Enum type에 코드 중복이 너무 많다고 느꼈다.
+  정답인지는 모르겠지만, 소수점이 아닐 경우 IntegerType으로 소수점이 있을경우 Double type으로 결과가 나가도록 설정했다. 
 ---
 ## 👨‍💻 부족한점
 람다와 제네릭의 사용의 빈번도 늘리기
