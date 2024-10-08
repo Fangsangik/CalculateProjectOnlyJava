@@ -1,8 +1,6 @@
 package com.example.calculatorproject.level3;
+import java.util.*;
 
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class CalculateMain {
@@ -25,6 +23,7 @@ public class CalculateMain {
                     continue;  // 양수가 아닐 경우 다시 입력받음
                 }
 
+
                 System.out.print("두 번째 숫자를 입력하세요: ");
                 String input2 = sc.nextLine();
                 Number num2 = parseInput(input2);
@@ -35,14 +34,10 @@ public class CalculateMain {
                     continue;  // 양수가 아닐 경우 다시 입력받음
                 }
 
-                //버퍼정리 (next.int() 숫자를 읽고, next.line() 메서드 사용시
-                //새로운 입력을 하기 전에 입력 버퍼에 남아있던 개행문자를 읽는 경우가 생김
-                sc.nextLine();
-
-                System.out.print("기호를 입력하세요 (+, -, *, /): ");
+                System.out.print("연산 기호를 입력하세요 (+, -, *, /): ");
                 String operator = sc.nextLine();
 
-                Operation operation = getOperation(operator);
+                Operation operatorType = getOperatorType(operator);
 
                 // 계산 수행 및 결과 출력
                 Number result = calculator.calculate(num1, num2, operatorType);
@@ -60,8 +55,7 @@ public class CalculateMain {
                 List<Number> compareRst = calculator.getResultsGreaterThan(resultList, compareVal);
                 System.out.println("입력 값보다 큰 결과: " + compareRst);
 
-
-                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                System.out.print("계속하시겠습니까? (exit 입력 시 종료): ");
                 String answer = sc.nextLine();
                 if (answer.equalsIgnoreCase("exit")) {
                     System.out.println("프로그램을 종료합니다.");
@@ -71,12 +65,7 @@ public class CalculateMain {
             } catch (ArithmeticException | IllegalArgumentException e) {
                 System.out.println(e.getMessage());
                 continue;
-            } catch (InputMismatchException e) {
-                System.out.println("잘못입력하셨습니다. 숫자를 입력해 주세요");
-                sc.nextLine();
-                continue;
             }
-
         }
         sc.close();
     }
