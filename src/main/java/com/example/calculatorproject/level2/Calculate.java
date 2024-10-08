@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculate {
-    private List<Integer> result;
+    private List<Integer> resultList;
 
     public Calculate() {
-        this.result = new ArrayList<>();
+        this.resultList = new ArrayList<>();
     }
 
     // 계산 메서드
@@ -40,8 +40,8 @@ public class Calculate {
 
     // 리스트에서 첫 번째 결과 삭제
     public void removeRst() {
-        if (!result.isEmpty()) {
-            result.remove(0);
+        if (!resultList.isEmpty()) {
+            resultList.remove(0);
             System.out.println("첫 번째 결과가 삭제되었습니다.");
         } else {
             System.out.println("삭제할 데이터가 없습니다.");
@@ -50,7 +50,7 @@ public class Calculate {
 
 
     // 전체 결과 출력 (디버깅용)
-    public List<Integer> getResults() {
-        return result;
+    public String getResults() {
+        return resultList.toString();
     }
 }
