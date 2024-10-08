@@ -11,7 +11,7 @@ public class ArithmeticCalculator<T extends Number> {
 
     private final List<T> resultList = new ArrayList<>();
 
-    public T calculate(T a, T b, Operation operatorType) {
+    public Number calculate(T a, T b, Operation operatorType) {
         return operatorType.apply(a, b);
     }
 
