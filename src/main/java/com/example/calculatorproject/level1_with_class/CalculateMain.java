@@ -31,18 +31,18 @@ public class CalculateMain {
                     break;  // exit 입력 시 루프 종료
                 }
 
-                int rst = 0;
-                switch (op) {
+                int result = 0;
+                switch (operation) {
                     case "+":
-                        rst = calc.add(a, b);
+                        result = calc.add(num1, num2);
                         break;
 
                     case "-":
-                        rst = calc.subtract(a, b);
+                        result = calc.subtract(num1, num2);
                         break;
 
                     case "*":
-                        rst = calc.multiply(a, b);
+                        result = calc.multiply(num1, num2);
                         break;
 
                     case "/":
@@ -54,7 +54,7 @@ public class CalculateMain {
                         continue;
                 }
 
-                System.out.println("결과 : " + rst);
+                System.out.println("결과 : " + result);
             } catch (ArithmeticException e) {
                 System.out.println("오류" + e.getMessage());
             } catch (InputMismatchException e) {
