@@ -1,8 +1,8 @@
 # 👨‍💻 CalculateProjectOnlyJava
 ---
-Tool : <img alt="Java" src ="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/>  <img alt="Java" src ="https://img.shields.io/badge/intellijidea-000000.svg?&style=for-the-badge&logo=intellijidea&logoColor=white"/>
-
-기간 : 2024/10/08 ~ 2024/10/08 (리펙토링 할 수도 있음)
+### 🛠️ Tool : <img alt="Java" src ="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/>  <img alt="Java" src ="https://img.shields.io/badge/intellijidea-000000.svg?&style=for-the-badge&logo=intellijidea&logoColor=white"/>
+---
+Duration : 2024/10/08 ~ 2024/10/08 (리펙토링 할 수도 있음)
 ---
 ## 👨‍💻 About Project 
 #### 간단한 계산기 구현 기능
