@@ -12,30 +12,32 @@ public class Calculate {
 
     // 계산 메서드
     public int calculate(int a, int b, String op) {
-        int rst = 0;  // 계산 결과를 저장할 변수
+        //줄여쓸때와 안줄여쓸때 조직마다 다르긴 하지만, 조직이 크면 -> 조직 규칙
+        //줄여쓰기 연습 X
+        int result = 0;  // 계산 결과를 저장할 변수
 
         switch (op) {
             case "+":
-                rst = a + b;
+                result = a + b;
                 break;
             case "-":
-                rst = a - b;
+                result = a - b;
                 break;
             case "*":
-                rst = a * b;
+                result = a * b;
                 break;
             case "/":
                 if (b == 0) {
                     throw new ArithmeticException("0으로 나눌 수 없습니다.");
                 }
-                rst = a / b;
+                result = a / b;
                 break;
             default:
                 throw new IllegalArgumentException("잘못된 연산자입니다.");
         }
 
-        result.add(rst);
-        return rst;
+        //result에 add를 하는 행위는 계산 기능과 관계 없음
+        return result;
     }
 
     // 리스트에서 첫 번째 결과 삭제
