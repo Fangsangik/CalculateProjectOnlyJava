@@ -22,7 +22,7 @@ public class CalculateMain {
                 // 첫 번째 숫자가 양수인지 확인
                 if (num1.doubleValue() < 0) {
                     System.out.println("양수로 입력해 주세요");
-                    break;
+                    continue;  // 양수가 아닐 경우 다시 입력받음
                 }
 
                 System.out.print("두 번째 숫자를 입력하세요: ");
@@ -32,7 +32,7 @@ public class CalculateMain {
                 // 두 번째 숫자가 양수인지 확인
                 if (num2.doubleValue() < 0) {
                     System.out.println("양수로 입력해 주세요");
-                    break;
+                    continue;  // 양수가 아닐 경우 다시 입력받음
                 }
 
                 //버퍼정리 (next.int() 숫자를 읽고, next.line() 메서드 사용시
