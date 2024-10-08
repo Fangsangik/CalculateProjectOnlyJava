@@ -1,6 +1,5 @@
 package com.example.calculatorproject.level1;
 
-import ch.qos.logback.classic.spi.IThrowableProxy;
 
 import java.util.Scanner;
 

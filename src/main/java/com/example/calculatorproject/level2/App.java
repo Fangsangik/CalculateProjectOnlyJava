@@ -10,8 +10,7 @@ public class App {
         Calculate calculate = new Calculate();
         Scanner sc = new Scanner(System.in);
 
-        String operator = sc.nextLine();
-        while (!operator.equals("exit")) {
+        while (true) {
             try {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 int num1 = sc.nextInt();
@@ -32,6 +31,7 @@ public class App {
                 sc.nextLine();
 
                 System.out.print("기호를 입력하세요 (+, -, *, /): ");
+                String operator = sc.nextLine();
 
                 //List에 값을 넣는다.
                 List<Integer> result = new ArrayList<>();
