@@ -11,8 +11,9 @@ public class CalculateMain {
         while (true) {
 
             System.out.print("첫 숫자를 입력하세요 : ");
-            int a = sc.nextInt();
-            if (a < 0) {
+            int num1 = sc.nextInt();
+
+            if (num1 < 0) {
                 System.out.println("양의 정수만 입력이 가능합니다. 다시 입력하세요");
                 sc.nextLine();
                 continue;
