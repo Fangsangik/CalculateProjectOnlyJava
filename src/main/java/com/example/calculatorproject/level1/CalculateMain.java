@@ -7,10 +7,8 @@ public class CalculateMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //내부에 종료 조건 X -> 무한루프
-        //문자열변수 -> exist 조건에 맞으면 (true) 수정해보기
-        String op = sc.nextLine();
-        while (!op.equals("exit")) {
+
+        while (true) {
 
             System.out.print("첫 숫자를 입력하세요 : ");
             int num1 = sc.nextInt();
@@ -32,11 +30,12 @@ public class CalculateMain {
             sc.nextLine();
 
             System.out.print("+, -, *, / 중 히나를 입력해주세요 (종료 = exit) : ");
+
             String op = sc.nextLine();
 
             if (op.equalsIgnoreCase("exit")) {
-                System.out.println("프로그램을 종료합니다. ");
-                break;
+                System.out.println("프로그램을 종료합니다.");
+                break;  // exit 입력 시 루프 종료
             }
 
             int result = 0;
