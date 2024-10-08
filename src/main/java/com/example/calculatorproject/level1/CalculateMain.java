@@ -8,7 +8,10 @@ public class CalculateMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
+        //내부에 종료 조건 X -> 무한루프
+        //문자열변수 -> exist 조건에 맞으면 (true) 수정해보기
+        String op = sc.nextLine();
+        while (!op.equals("exit")) {
 
             System.out.print("첫 숫자를 입력하세요 : ");
             int num1 = sc.nextInt();
