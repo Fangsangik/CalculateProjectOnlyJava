@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class CalculateMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArithmeticCalculator<Number> calculator = new ArithmeticCalculator<>();
+        ArithmeticCalculator<Double> calculator = new ArithmeticCalculator<>();
 
         while (true) {
             try {
