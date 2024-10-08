@@ -5,70 +5,44 @@ package com.example.calculatorproject.level3;
 public enum Operation {
     ADD("+") {
         @Override
-        public <T extends Number> T apply(T a, T b) {
-            if (a instanceof Double || b instanceof Double) {
-                return (T) Double.valueOf(a.doubleValue() + b.doubleValue());
-            } else if (a instanceof Integer || b instanceof Integer) {
-                return (T) Integer.valueOf(a.intValue() + b.intValue());
-            } else if (a instanceof Long || b instanceof Long) {
-                return (T) Long.valueOf(a.longValue() + b.longValue());
-            } else if (a instanceof Float || b instanceof Float) {
-                return (T) Float.valueOf(a.floatValue() + b.floatValue());
+        public Number apply(Number a, Number b) {
+            if (a instanceof Integer && b instanceof Integer) {
+                return a.intValue() + b.intValue();
             } else {
-                throw new IllegalArgumentException("지원되지 않는 타입입니다.");
+                return a.doubleValue() + b.doubleValue();
             }
         }
     },
-
     SUBTRACT("-") {
         @Override
-        public <T extends Number> T apply(T a, T b) {
-            if (a instanceof Double || b instanceof Double) {
-                return (T) Double.valueOf(a.doubleValue() - b.doubleValue());
-            } else if (a instanceof Integer || b instanceof Integer) {
-                return (T) Integer.valueOf(a.intValue() - b.intValue());
-            } else if (a instanceof Long || b instanceof Long) {
-                return (T) Long.valueOf(a.longValue() - b.longValue());
-            } else if (a instanceof Float || b instanceof Float) {
-                return (T) Float.valueOf(a.floatValue() - b.floatValue());
+        public Number apply(Number a, Number b) {
+            if (a instanceof Integer && b instanceof Integer) {
+                return a.intValue() - b.intValue();
             } else {
-                throw new IllegalArgumentException("지원되지 않는 타입입니다.");
+                return a.doubleValue() - b.doubleValue();
             }
         }
     },
     MULTIPLY("*") {
         @Override
-        public <T extends Number> T apply(T a, T b) {
-            if (a instanceof Double || b instanceof Double) {
-                return (T) Double.valueOf(a.doubleValue() * b.doubleValue());
-            } else if (a instanceof Integer || b instanceof Integer) {
-                return (T) Integer.valueOf(a.intValue() * b.intValue());
-            } else if (a instanceof Long || b instanceof Long) {
-                return (T) Long.valueOf(a.longValue() * b.longValue());
-            } else if (a instanceof Float || b instanceof Float) {
-                return (T) Float.valueOf(a.floatValue() * b.floatValue());
+        public Number apply(Number a, Number b) {
+            if (a instanceof Integer && b instanceof Integer) {
+                return a.intValue() * b.intValue();
             } else {
-                throw new IllegalArgumentException("지원되지 않는 타입입니다.");
+                return a.doubleValue() * b.doubleValue();
             }
         }
     },
     DIVIDE("/") {
         @Override
-        public <T extends Number> T apply(T a, T b) {
+        public Number apply(Number a, Number b) {
             if (b.doubleValue() == 0) {
                 throw new ArithmeticException("0으로 나눌 수 없습니다.");
             }
-
-            if (a instanceof Double || b instanceof Double) {
-                return (T) Double.valueOf(a.doubleValue() / b.doubleValue());
-            } else if (a instanceof Integer || b instanceof Integer) {
-                return (T) Integer.valueOf(a.intValue() / b.intValue());
-            } else if (a instanceof Long || b instanceof Long) {
-                return (T) Long.valueOf(a.longValue() / b.longValue());
-            } else if ( a instanceof Float || b instanceof Float) {
-                return (T) Float.valueOf(a.floatValue() / b.floatValue());
+            if (a instanceof Integer && b instanceof Integer) {
+                return a.intValue() / b.intValue();
             } else {
-                throw new IllegalArgumentException("지원되지 않는 타입입니다.");
+                return a.doubleValue() / b.doubleValue();
             }
         }
     };
@@ -83,5 +57,5 @@ public enum Operation {
         return symbol;
     }
 
-    public abstract <T extends Number> T apply(T a, T b);
+    public abstract Number apply(Number a, Number b);
 }
