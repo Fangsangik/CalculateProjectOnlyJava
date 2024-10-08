@@ -23,8 +23,8 @@ public class CalculateMain {
             }
 
             System.out.print("두번쨰 숫자를 입력하세요 : ");
-            int b = sc.nextInt();
-            if (b < 0) {
+            int num2 = sc.nextInt();
+            if (num2 < 0) {
                 System.out.println("양의 정수만 입력이 가능합니다. 다시 입력하세요");
                 sc.nextLine();
                 continue;
