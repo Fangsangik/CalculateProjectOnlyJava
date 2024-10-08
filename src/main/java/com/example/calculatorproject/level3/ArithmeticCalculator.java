@@ -22,7 +22,7 @@ public class ArithmeticCalculator<T extends Number> {
                 .collect(Collectors.toList());
     }
 
-    public List<Double> getRst() {
-        return rsts;
+    public List<T> getResultList() {
+        return resultList;
     }
 }
