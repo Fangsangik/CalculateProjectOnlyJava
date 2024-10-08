@@ -17,7 +17,7 @@ public class CalculateMain {
                 int num1 = sc.nextInt();
 
                 System.out.print("두번쨰 숫자를 입력하세요 : ");
-                int b = sc.nextInt();
+                int num2 = sc.nextInt();
 
                 //버퍼 초기화
                 sc.nextLine();
