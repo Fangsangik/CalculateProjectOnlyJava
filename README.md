@@ -20,7 +20,7 @@
      
      -> interface를 상속받아 switch 문으로 로직 작성
 
-     -> interface로 기능을 구현한 이유, 다형성을 제공하고, 기능만 필요하기에 interface로 작성 
+     -> **interface로 기능을 구현한 이유, 다형성을 제공하고, 기능만 필요하기에 interface로 작성**
 
 2. level2
    - Calculate class에 calculate 메소드, remove 형성
