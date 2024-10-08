@@ -23,11 +23,12 @@ public class CalculateMain {
                 sc.nextLine();
 
                 System.out.print("기호를 입력하세요 (+, -, *, /) (프로그램 종료  : exit)\n : ");
-                String op = sc.nextLine();
 
-                if (op.equalsIgnoreCase("exit")) {
-                    System.out.print("프로그램을 종료합니다.");
-                    break;
+                String operation = sc.nextLine();
+
+                if (operation.equalsIgnoreCase("exit")) {
+                    System.out.println("프로그램을 종료합니다.");
+                    break;  // exit 입력 시 루프 종료
                 }
 
                 int rst = 0;
