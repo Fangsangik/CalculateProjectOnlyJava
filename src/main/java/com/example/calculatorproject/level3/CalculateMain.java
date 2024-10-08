@@ -16,15 +16,21 @@ public class CalculateMain {
         while (true) {
             try {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
-                double num1 = sc.nextDouble();
-                if (num1 < 0) {
+                String input1 = sc.nextLine();  // 문자열로 입력을 받음
+                Number num1 = parseInput(input1);  // 입력을 분석하여 적절한 타입으로 변환
+
+                // 첫 번째 숫자가 양수인지 확인
+                if (num1.doubleValue() < 0) {
                     System.out.println("양수로 입력해 주세요");
                     break;
                 }
 
                 System.out.print("두 번째 숫자를 입력하세요: ");
-                double num2 = sc.nextDouble();
-                if (num2 < 0) {
+                String input2 = sc.nextLine();
+                Number num2 = parseInput(input2);
+
+                // 두 번째 숫자가 양수인지 확인
+                if (num2.doubleValue() < 0) {
                     System.out.println("양수로 입력해 주세요");
                     break;
                 }
@@ -68,15 +74,22 @@ public class CalculateMain {
         sc.close();
     }
 
-    //람다는 아직 어렵....
-    //입략 문자열 연산자 -> enum 변환
-    private static Operation getOperation(String operation) {
-        //스트림 생성 시작 알림
-        return Arrays.stream(Operation.values())
-                //operation과 일치하는 값 찾기
-                .filter(x -> x.getSymbol().equals(operation))
-                //찾은 값 중 첫번째 값 사용
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("잘못된 값입니다."));
+    // 입력값을 분석하여 적절한 Number 타입으로 변환하는 메서드
+    private static Number parseInput(String input) {
+        if (input.contains(".")) {
+            return Double.parseDouble(input);
+        } else {
+            return Integer.parseInt(input);
+        }
+    }
+
+    // 문자열로부터 OperatorType을 가져오는 메서드
+    private static Operation getOperatorType(String symbol) {
+        for (Operation op : Operation.values()) {
+            if (op.getSymbol().equals(symbol)) {
+                return op;
+            }
+        }
+        throw new IllegalArgumentException("잘못된 연산자입니다.");
     }
 }
