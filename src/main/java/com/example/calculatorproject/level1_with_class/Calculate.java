@@ -4,18 +4,18 @@ public class Calculate implements Operation {
 
 
     @Override
-    public int add(int a, int b) {
-        return a + b;
+    public int add(int num1, int num2) {
+        return num1 + num2;
     }
 
     @Override
-    public int subtract(int a, int b) {
-        return a - b;
+    public int subtract(int num1, int num2) {
+        return num1 - num2;
     }
 
     @Override
-    public int multiply(int a, int b) {
-       return a * b;
+    public int multiply(int num1, int num2) {
+       return num1 * num2;
     }
 
     //예외 처리를 여기서 하는게 좋을까? 아님 Main에서 처리하는게 좋을까?
