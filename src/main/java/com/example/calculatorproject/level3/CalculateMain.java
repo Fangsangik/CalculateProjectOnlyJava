@@ -8,7 +8,10 @@ import java.util.Scanner;
 public class CalculateMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArithmeticCalculator<Double> calculator = new ArithmeticCalculator<>();
+        ArithmeticCalculator<Number> calculator = new ArithmeticCalculator<>();
+
+        // 결과를 저장할 List
+        List<Number> resultList = new ArrayList<>();
 
         while (true) {
             try {
@@ -38,11 +41,8 @@ public class CalculateMain {
                 double result = calculator.calculate(num1, num2, operation);
                 System.out.println("결과 : " + result);
 
-                //비교값 안담아짐
-                //filter 사용시 변수 값 잘못대입
-                System.out.println("비교할 값을 비교하세요 : ");
-                double compareVal = sc.nextDouble();
-                sc.nextLine();
+                // 계산 결과를 List에 추가
+                resultList.add(result);
 
                 List<Double> compareRst = calculator.getBiggerRst(compareVal);
                 System.out.println("입력 값보다 큰 결과 : " + compareRst);
