@@ -16,10 +16,15 @@ public class ArithmeticCalculator<T extends Number> {
         return operatorType.apply(a, b);
     }
 
-    public List<Double> getBiggerRst(T val) {
-        return rsts.stream()
-                .filter(rsts -> Double.valueOf(val.doubleValue()).compareTo(rsts) < 0)
-                .collect(Collectors.toList());
+    // List에서 입력된 값보다 큰 값을 필터링하는 메서드
+    public List<Number> getResultsGreaterThan(List<Number> resultList, Number compareVal) {
+        List<Number> filteredResults = new ArrayList<>();
+        for (Number result : resultList) {
+            if (result.doubleValue() > compareVal.doubleValue()) {
+                filteredResults.add(result);
+            }
+        }
+        return filteredResults;
     }
 
     public List<T> getResultList() {
