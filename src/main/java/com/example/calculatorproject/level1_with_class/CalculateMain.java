@@ -14,7 +14,7 @@ public class CalculateMain {
             try {
 
                 System.out.print("찻번째 숫자를 입력하세요 : ");
-                int a = sc.nextInt();
+                int num1 = sc.nextInt();
 
                 System.out.print("두번쨰 숫자를 입력하세요 : ");
                 int b = sc.nextInt();
