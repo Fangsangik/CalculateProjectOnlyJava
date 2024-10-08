@@ -46,7 +46,10 @@ public class CalculateMain {
                         break;
 
                     case "/":
-                        rst = calc.divide(a, b);
+                        if (num2 == 0 ){
+                            throw new ArithmeticException("나누는 값이 0이면 안됩니다.");
+                        }
+                        result = calc.divide(num1, num2);
                         break;
 
                     default:
