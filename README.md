@@ -100,7 +100,14 @@
 - Integer, Long, Float, Double 일 경우 다양한 숫자를 처리하기 어려움 
   Number class를 사용해야 할 것 같은데... Number를 사용한 다음 각각의 Double일때 Integer일때의 경우를 다 생각해서 작성해야 하는지에 대한 고민이
   들었고, 또한 Operation.Enum type에 코드 중복이 너무 많다고 느꼈다.
-  정답인지는 모르겠지만, 소수점이 아닐 경우 IntegerType으로 소수점이 있을경우 Double type으로 결과가 나가도록 설정했다. 
+  정답인지는 모르겠지만, 소수점이 아닐 경우 IntegerType으로 소수점이 있을경우 Double type으로 결과가 나가도록 설정했다.
+---
+## 🚀 Refactoring
+
+level3 Operation에서 Number type으로 받았다면, -> Int는 double에 포함됨으로 Double type으로 변경
+NumberSpecification class를 생성해 Integer type 일때 Integer type으로 받을 수 있게 설정, Double 이면 double type에 맞게 설정 
+값을 비교 할 때도 각각 값을 double일 경우 double로 Integer일 경우 Integer type으로 결과를 받을 수 있게 설정했다. 
+
 ---
 ## 👨‍💻 부족한점
 람다와 제네릭의 사용의 빈번도 늘리기
