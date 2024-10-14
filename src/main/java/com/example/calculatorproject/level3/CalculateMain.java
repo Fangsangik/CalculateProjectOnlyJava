@@ -15,8 +15,8 @@ public class CalculateMain {
         while (true) {
             try {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
-                String input1 = sc.nextLine();  // 문자열로 입력을 받음
-                Number num1 = parseInput(input1);  // 입력을 분석하여 적절한 타입으로 변환
+                String input1 = sc.nextLine();
+                double num1 = NumberSpecification.parseInput(input1);
 
                 if (num1 < 0) {
                     System.out.println("양수로 입력해 주세요.");
@@ -25,7 +25,7 @@ public class CalculateMain {
 
                 System.out.print("두 번째 숫자를 입력하세요: ");
                 String input2 = sc.nextLine();
-                Number num2 = parseInput(input2);
+                double num2 = NumberSpecification.parseInput(input2);
 
                 if (num2 < 0) {
                     System.out.println("양수로 입력해 주세요.");
