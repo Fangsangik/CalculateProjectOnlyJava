@@ -3,8 +3,10 @@ package com.example.calculatorproject.level1;
 
 import java.util.Scanner;
 
+//클레스 없이 기본적인 연산 수행할 수 있는 계산기 만들기
 public class CalculateMain {
     public static void main(String[] args) {
+        //Scanner 적용
         Scanner sc = new Scanner(System.in);
 
 
@@ -31,7 +33,8 @@ public class CalculateMain {
 
             System.out.print("+, -, *, / 중 히나를 입력해주세요 (종료 = exit) : ");
 
-            String op = sc.nextLine();
+            //사칙연산 기호를 입력받기
+            char op = sc.next().charAt(0);
 
             if (op.equalsIgnoreCase("exit")) {
                 System.out.println("프로그램을 종료합니다.");
@@ -40,7 +43,8 @@ public class CalculateMain {
 
             int result = 0;
 
-            if (op.equals("+")) {
+            // 사칙연산 기호 사용해서 연산 진행 & 결과 입력
+            if (op == '+') {
                 result = num1 + num2;
             } else if (op.equals("-")) {
                 result = num1 - num2;
