@@ -36,7 +36,9 @@ public class CalculateMain {
             //사칙연산 기호를 입력받기
             char op = sc.next().charAt(0);
 
-            if (op.equalsIgnoreCase("exit")) {
+            //종료시 exit
+            String input = String.valueOf(op);
+            if (input.equalsIgnoreCase("exit")) {
                 System.out.println("프로그램을 종료합니다.");
                 break;  // exit 입력 시 루프 종료
             }
@@ -46,11 +48,11 @@ public class CalculateMain {
             // 사칙연산 기호 사용해서 연산 진행 & 결과 입력
             if (op == '+') {
                 result = num1 + num2;
-            } else if (op.equals("-")) {
+            } else if (op == '-') {
                 result = num1 - num2;
-            } else if (op.equals("*")) {
+            } else if (op == '*') {
                 result = num1 * num2;
-            } else if (op.equals("/")) {
+            } else if (op == '/') {
                 if (num2 ==  0) {
                     System.out.println("0으로 나눌 수 없습니다. 다시 입력하세요");
                     continue;
