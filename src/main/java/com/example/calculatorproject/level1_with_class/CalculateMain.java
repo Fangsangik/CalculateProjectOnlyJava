@@ -3,10 +3,14 @@ package com.example.calculatorproject.level1_with_class;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+//인터페이스를 활용한 Calculate 기능
 public class CalculateMain {
     public static void main(String[] args) {
 
+        //Scanner 사용
         Scanner sc = new Scanner(System.in);
+
+        //Calculate 인스턴스 생성
         Calculate calc = new Calculate();
 
         while (true) {
@@ -24,6 +28,7 @@ public class CalculateMain {
 
                 System.out.print("기호를 입력하세요 (+, -, *, /) (프로그램 종료  : exit)\n : ");
 
+                //사칙 연산 기호 입력값
                 String operation = sc.nextLine();
 
                 if (operation.equalsIgnoreCase("exit")) {
@@ -31,6 +36,7 @@ public class CalculateMain {
                     break;  // exit 입력 시 루프 종료
                 }
 
+                //사칙 연산 기능 수행
                 int result = 0;
                 switch (operation) {
                     case "+":

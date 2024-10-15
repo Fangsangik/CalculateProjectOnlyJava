@@ -1,5 +1,6 @@
 package com.example.calculatorproject.level1_with_class;
 
+//Calculate 클래슬 통헤 사칙 연산 기능 수행
 public class Calculate implements Operation {
 
 
