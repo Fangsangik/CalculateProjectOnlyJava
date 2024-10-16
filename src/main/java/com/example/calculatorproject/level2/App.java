@@ -36,7 +36,11 @@ public class App {
                 //List에 값을 넣는다.
                 List<Integer> result = new ArrayList<>();
                 int calculateResult = calculate.calculate(num1, num2, operator);
-                System.out.println("결과 : " + result.add(calculateResult));
+                List<Integer> result = calculate.getResultList();
+                result.add(calculateResult);
+                calculate.setResultList(result);
+
+                System.out.println("결과 : " + calculateResult);
 
             } catch (ArithmeticException | IllegalArgumentException e) {
                 System.out.println(e.getMessage());
