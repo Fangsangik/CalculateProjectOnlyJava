@@ -56,4 +56,12 @@ public class Calculate {
     public String getResults() {
         return resultList.toString();
     }
+
+    public List<Integer> getResultList() {
+        return resultList;
+    }
+
+    public void setResultList(List<Integer> resultList) {
+        this.resultList = resultList;
+    }
 }
