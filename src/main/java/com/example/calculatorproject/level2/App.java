@@ -33,8 +33,7 @@ public class App {
                 System.out.print("기호를 입력하세요 (+, -, *, /): ");
                 String operator = sc.nextLine();
 
-                //List에 값을 넣는다.
-                List<Integer> result = new ArrayList<>();
+                //getter & setter 를 사용해 결과 후 계산 값을 저장
                 int calculateResult = calculate.calculate(num1, num2, operator);
                 List<Integer> result = calculate.getResultList();
                 result.add(calculateResult);
@@ -50,6 +49,7 @@ public class App {
                 continue;
             }
 
+            //계산 추가 여부 확인
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("exit")) {
@@ -57,6 +57,7 @@ public class App {
                 break;
             }
 
+            //첫번째 값 결과 삭제 여부 확인
             System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = sc.nextLine();
             if (remove.equalsIgnoreCase("remove")) {
@@ -64,6 +65,7 @@ public class App {
                 System.out.println("저장된 데이터를 삭제했습니다.");
             }
 
+            //현재 저장된 결과 확인
             System.out.println("현재 저장된 결과 : " + calculate.getResults());
         }
         sc.close();
