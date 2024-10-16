@@ -1,6 +1,8 @@
 package com.example.calculatorproject.level3;
 
 public class NumberSpecification {
+
+    //입력값이 실수인지 정수인지 구별
     public static Double parseInput(String input) {
         try {
             // 소수점이 있는지 여부로 정수와 실수를 구분
@@ -14,6 +16,7 @@ public class NumberSpecification {
         }
     }
 
+    //출력값이 실수인지 정수인지 구별
     public static String formatNumber(Double number) {
         if (number % 1 == 0) {
             return String.valueOf(number.intValue());  // 정수로 변환
