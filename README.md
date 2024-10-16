@@ -11,7 +11,7 @@
 
 ## 👨‍💻 About Project 
 
-**Branch로 각 단계에 맞게 class를 작성**
+**참고) Branch로 각 단계에 맞게 class를 작성**
 
 #### 간단한 계산기 구현 기능
 1. level1
