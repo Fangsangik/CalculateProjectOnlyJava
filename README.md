@@ -11,6 +11,8 @@
 
 ## 👨‍💻 About Project 
 
+**Branch로 각 단계에 맞게 class를 작성**
+
 #### 간단한 계산기 구현 기능
 1. level1
    - withdoutClass -> 단순히 클래스를 추가로 생성하지 않고 Main 함수에서 처리
