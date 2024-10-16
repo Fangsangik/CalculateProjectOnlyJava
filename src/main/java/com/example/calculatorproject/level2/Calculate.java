@@ -3,7 +3,10 @@ package com.example.calculatorproject.level2;
 import java.util.ArrayList;
 import java.util.List;
 
+//Calculate 클래스 적용
 public class Calculate {
+
+    //연산 결과를 저장하는 컬렉션 타입 필드를 외부에서 접근 X
     private List<Integer> resultList;
 
     public Calculate() {
@@ -12,8 +15,7 @@ public class Calculate {
 
     // 계산 메서드
     public int calculate(int a, int b, String op) {
-        //줄여쓸때와 안줄여쓸때 조직마다 다르긴 하지만, 조직이 크면 -> 조직 규칙
-        //줄여쓰기 연습 X
+
         int result = 0;  // 계산 결과를 저장할 변수
 
         switch (op) {
@@ -36,7 +38,6 @@ public class Calculate {
                 throw new IllegalArgumentException("잘못된 연산자입니다.");
         }
 
-        //result에 add를 하는 행위는 계산 기능과 관계 없음
         return result;
     }
 
