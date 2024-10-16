@@ -106,10 +106,11 @@
 ---
 ## 🚀 Refactoring
 
-level3 Operation에서 Number type으로 받았다면, -> Int는 double에 포함됨으로 Double type으로 변경
+- level3 Operation에서 Number type으로 받았다면, -> Int는 double에 포함됨으로 Double type으로 변경
 NumberSpecification class를 생성해 Integer type 일때 Integer type으로 받을 수 있게 설정, Double 이면 double type에 맞게 설정 
 값을 비교 할 때도 각각 값을 double일 경우 double로 Integer일 경우 Integer type으로 결과를 받을 수 있게 설정했다. 
 
+- level3 제네릭 타입을 Number로 다시 변경해 모든 숫자 타입에 받을 수 있게 변경 했다.
 ---
 ## 👨‍💻 부족한점
 람다와 제네릭의 사용의 빈번도 늘리기
