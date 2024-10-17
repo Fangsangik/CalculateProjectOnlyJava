@@ -49,7 +49,7 @@
 
        - ArithmeticCalculator
          
-         -> Generic을 활용해 Number와, Comparable 상속
+         -> Generic을 활용해 Number 상속
 
          -> **calculate Method**
 
