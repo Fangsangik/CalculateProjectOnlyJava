@@ -1,4 +1,4 @@
-package com.example.calculatorproject.level1;
+package com.example.calculatorproject.level1_without_class;
 
 
 import java.util.Scanner;
